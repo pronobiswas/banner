@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <span>Logo</span>
+        </div>
+        <ul class="nav_links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="banner">
+        <!-- ==leftcol== -->
+        <div class="left_col">
+            <div class="left_col_container">
+                <div class="rotateText_container">
+                    <div class="rotateText"><span>P</span></div>
+                    <div class="rotateText"><span>R</span></div>
+                    <div class="rotateText"><span>O</span></div>
+                    <div class="rotateText"><span>N</span></div>
+                    <div class="rotateText"><span>O</span></div>
+                    <div class="rotateText"><span>B</span></div>
+                    <div class="rotateText"><span>O</span></div>
+                </div>
+            </div>
+        </div>
+        <div id="layer2">
+            <div id="slideDown">
+                slidedown
+            </div>
+            <div id="slideUp">
+                slideup
+            </div>
+        </div>
+        <div class="layer1">
+
+            <div class="bannerLogo">
+                <div class="bannerText">
+                    <h1>Pronob Biswas</h1>
+                    <h3>An Web Developer</h3>
+                    <button class="aboutme" onclick="showAboutMe()">About Me</button>
+                    <button class="aboutme" onclick="hideAboutMe()">hide About Me</button>
+
+                </div>
+                <div class="bannerLogo_container">
+                    <svg id="angle1" width="601" height="357" viewBox="0 0 601 357" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="gradientFill" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color: rgba(255, 0, 0, 0.336); stop-opacity: 1" />
+                                <stop offset="50%" style="stop-color: rgba(247, 0, 255, 0.329); stop-opacity: 1" />
+                                <stop offset="100%" style="stop-color: rgba(0, 0, 255, 0.349); stop-opacity: 1" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M378.517 1L600 172.235L378.517 356H232.712L455.979 172.235L232.712 1H313.915H378.517Z"
+                            stroke="white" fill="url(#gradientFill)" />
+                        <path d="M119.888 1L296.588 172.235L117.538 356H2L178.504 172.235L2 1H70.4882H119.888Z"
+                            stroke="url(#gradientFill)" />
+                    </svg>
+
+
+                </div>
+            </div>
+            <div class="profilePic">
+                <div class="box">
+                    <svg width="305" height="404" viewBox="0 0 305 404" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Define the gradient -->
+                        <defs>
+                            <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color: red; stop-opacity: 1" />
+                                <stop offset="50%" style="stop-color: rgb(247, 0, 255); stop-opacity: 1" />
+                                <stop offset="100%" style="stop-color: blue; stop-opacity: 1" />
+                            </linearGradient>
+                        </defs>
+
+
+
+                        <path id="path2" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M144.001 1.99988H11H2.00076C2.00076 1.99988 5.50153 346.5 2.00076 360.5C-1.5 374.5 76.5008 360.5 76.5008 360.5C76.5008 360.5 77.6578 367.74 79.5008 372C85.0637 384.857 99.2835 378.874 113.959 372.699C128.534 366.566 143.559 360.244 151.001 372C154.059 376.832 153.788 384.652 153.565 391.066C153.33 397.838 153.149 403.041 157.001 401.5C164.5 398.5 302.501 401.5 302.501 401.5C302.501 401.5 300.001 44.4998 302.501 33.9998C303.652 29.166 289.119 31.6441 272.904 34.409C253.897 37.6499 232.58 41.2849 231.501 33.9998C230.612 28.0001 231.304 24.3706 231.644 22.5845C231.794 21.7952 231.876 21.3659 231.723 21.2511C231.54 21.1143 231.022 21.4247 229.888 22.1054C229.282 22.4687 228.501 22.9374 227.501 23.4999C221.731 26.745 192.301 25.3099 170.71 24.257C162.361 23.8499 155.184 23.4999 151.001 23.4999C136.002 23.4998 144.001 1.99988 144.001 1.99988Z"
+                            stroke="url(#gradientStroke)" stroke-width="3" />
+                    </svg>
+
+                </div>
+            </div>
+        </div>
+        <!-- ==rightcol== -->
+        <div class="right_col">
+            <p>right_col</p>
+    </section>
+    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <!-- Define a linear gradient in <defs> -->
+        <defs>
+            <linearGradient id="gradientFill" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color: red; stop-opacity: 1" />
+                <stop offset="100%" style="stop-color: blue; stop-opacity: 1" />
+            </linearGradient>
+        </defs>
+
+        <!-- Apply the gradient fill to a circle -->
+        <circle cx="100" cy="100" r="80" fill="url(#gradientFill)" />
+    </svg>
+
+
+    <!-- ====script==== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

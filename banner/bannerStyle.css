@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#banner {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.164);
+  display: flex;
+}
+#banner .leftCol {
+  width: 50px;
+  height: 100%;
+  background-color: aqua;
+}
+#banner .mainBanner {
+  flex: 1;
+  height: 100%;
+  background-color: lightblue;
+}
+#banner .rightCol {
+  width: 50px;
+  height: 100%;
+  background-color: lightcoral;
+}/*# sourceMappingURL=bannerStyle.css.map */
