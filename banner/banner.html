@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./bannerStyle.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GSAP Text Outline Animation</title>
+  <style>
+    body {
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    svg {
+      width: 600px;
+      height: 150px;
+    }
+
+    text {
+      fill: none;
+      stroke: #111;
+      stroke-width: 2;
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+      font-family: Arial, sans-serif;
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <span>Logo</span>
-        </div>
-        <ul class="nav_links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <section id="banner">
-        <div class="leftCol">
-            <p>left col</p>
-        </div>
-        <div class="mainBanner"></div>
-        <div class="rightCol">
-            <p>right col</p>
-        </div>
-    </section>
+
+  <svg viewBox="0 0 600 150">
+    <text x="50" y="100" font-size="80">Pronob Biswas</text>
+  </svg>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    // Animate the outline (stroke) drawing
+    gsap.to("text", {
+      strokeDashoffset: 0,
+      duration: 2,
+      ease: "power2.out"
+    });
+  </script>
 </body>
 </html>

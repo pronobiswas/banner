@@ -16,6 +16,11 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("mouseup", () => {
         cursor.style.transform = "translate(-50%, -50%) scale(1)";
     });
+    gsap.to("#myName", {
+      strokeDashoffset: 0,
+      duration: 5,
+      ease: "power2.out"
+    });
 });
 console.log("Script loaded successfully!");
 
