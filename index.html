@@ -14,18 +14,30 @@
 </head>
 
 <body>
-    <nav>
-        <div class="logo">
-            <span>Logo</span>
-        </div>
-        <ul class="nav_links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <div class="logo">
+                <span>Logo</span>
+            </div>
+            <ul class="nav_links">
+                <li class="nav_item"><a href="#">Experiment</a></li>
+                <li class="nav_item"><a href="#">Case studies</a></li>
+                <li class="nav_item"><a href="#">Contact</a></li>
+                <li>
+                    <div class="themebtn">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="15" cy="15" r="15" fill="#D9D9D9" />
+                            <path
+                                d="M15 29C11.287 29 7.72601 27.525 5.10051 24.8995C2.475 22.274 1 18.713 1 15C0.999999 11.287 2.47499 7.72602 5.1005 5.10051C7.72601 2.475 11.287 1 15 1L15 15L15 29Z"
+                                fill="black" />
+                        </svg>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <section id="banner">
-        <!-- ==leftcol== -->
+
         <div class="left_col">
             <div class="left_col_container">
                 <div class="rotateText_container">
@@ -35,26 +47,33 @@
                     <div class="rotateText"><span>N</span></div>
                     <div class="rotateText"><span>O</span></div>
                     <div class="rotateText"><span>B</span></div>
-                    <div class="rotateText"><span>O</span></div>
                 </div>
+                <svg width="16" height="118" viewBox="0 0 16 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7.28081 117.695C7.66454 118.092 8.29761 118.103 8.69481 117.719L15.1675 111.466C15.5647 111.082 15.5756 110.449 15.1919 110.052C14.8082 109.655 14.1751 109.644 13.7779 110.028L8.02438 115.586L2.46588 109.832C2.08215 109.435 1.44908 109.424 1.05188 109.808C0.654681 110.192 0.643766 110.825 1.0275 111.222L7.28081 117.695ZM10 1L9.00015 0.982761L7.00015 116.983L8 117L8.99985 117.017L10.9999 1.01724L10 1Z"
+                        fill="black" />
+                </svg>
+
             </div>
         </div>
-        <div id="layer2">
-            <div id="slideDown">
-                slidedown
-            </div>
-            <div id="slideUp">
-                slideup
-            </div>
-        </div>
+
         <div class="layer1">
 
             <div class="bannerLogo">
                 <div class="bannerText">
                     <h1>Pronob Biswas</h1>
-                    <h3>An Web Developer</h3>
-                    <button class="aboutme" onclick="showAboutMe()">About Me</button>
-                    <button class="aboutme" onclick="hideAboutMe()">hide About Me</button>
+                    <h3>An Interactive Web Developer</h3>
+                    <button class="aboutme" onclick="showAboutMe()">About Me
+                        
+                        <svg class="buttonArrow" width="41" height="16" viewBox="0 0 41 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M40.7071 8.70686C41.0977 8.31634 41.0977 7.68317 40.7071 7.29265L34.3432 0.928688C33.9527 0.538164 33.3195 0.538164 32.929 0.928688C32.5384 1.31921 32.5384 1.95238 32.929 2.3429L38.5858 7.99976L32.929 13.6566C32.5384 14.0471 32.5384 14.6803 32.929 15.0708C33.3195 15.4613 33.9527 15.4613 34.3432 15.0708L40.7071 8.70686ZM3.05176e-05 7.99976L3.05176e-05 8.99976L40 8.99976V7.99976V6.99976L3.05176e-05 6.99976L3.05176e-05 7.99976Z"
+                                fill="white" />
+                        </svg>
+
+
+                    </button>
+                    <!-- <button class="aboutme" onclick="hideAboutMe()">hide About Me</button> -->
 
                 </div>
                 <div class="bannerLogo_container">
@@ -79,7 +98,7 @@
             <div class="profilePic">
                 <div class="box">
                     <svg width="305" height="404" viewBox="0 0 305 404" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Define the gradient -->
+
                         <defs>
                             <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" style="stop-color: red; stop-opacity: 1" />
@@ -98,22 +117,10 @@
                 </div>
             </div>
         </div>
-        <!-- ==rightcol== -->
+
         <div class="right_col">
             <p>right_col</p>
     </section>
-    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-        <!-- Define a linear gradient in <defs> -->
-        <defs>
-            <linearGradient id="gradientFill" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color: red; stop-opacity: 1" />
-                <stop offset="100%" style="stop-color: blue; stop-opacity: 1" />
-            </linearGradient>
-        </defs>
-
-        <!-- Apply the gradient fill to a circle -->
-        <circle cx="100" cy="100" r="80" fill="url(#gradientFill)" />
-    </svg>
 
 
     <!-- ====script==== -->
