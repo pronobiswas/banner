@@ -1,39 +1,40 @@
 *{margin: 0;padding: 0;box-sizing: border-box;font-family: "Montserrat", sans-serif;}
-// html, body {
-//   cursor: url('cursor.png'), auto;
-// }
+html, body {
+  cursor: url('cursor.png'), auto;
+}
 /* Custom mouse tracker styles */
-// .custom-cursor {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 30px;
-//   height: 30px;
-//   background: transparent;
-//   border: 1px solid black;
-//   border-radius: 50%;
-//   pointer-events: none;
-//   z-index: 9999;
-//   transform: translate(-50%, -50%);
-//   transition: 0.1s, transform 0.08s;
-//   mix-blend-mode: difference;
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     width: 10px;
-//     height: 10px;
-//     background-color: black;
-//     border-radius: 50%;
-//     transform: translate(-50%, -50%);
-//   }
-// }
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: 0.1s, transform 0.08s;
+  mix-blend-mode: difference;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 header{
     width: 100%;
     height: fit-content;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     background-color: transparent;
     position: fixed;
@@ -44,13 +45,13 @@ header{
         width: 100%;
         max-width: 1200px;
         height: fit-content;
-        padding: 10px 20px;
+        padding: 20px 5px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 2px solid rgb(3, 0, 0);
+        // border-bottom: 2px solid rgba(3, 0, 0, 0.144);
         .logo{
-            font-size: 24px;
+            font-size: 34px;
             font-weight: bold;
             color: #ffffff;
         }
@@ -99,18 +100,45 @@ header{
         }
     
     }
+    #headersvg{
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
 }
 #banner{
     width: 100%;
     height: 100vh;
-    background-image: radial-gradient(circle, #004239b2 , #012255ad);
+    background-image: radial-gradient(circle, #ffffff , #000000);
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // padding: 50px 20px 20px 20px;
     overflow: hidden;
+    #aboutMe{
+        width: 100%;
+        height: 100vh;
+        background-color: #00000054;
+        z-index: 99999;
+        position: absolute;
+        display: flex;
+        overflow: hidden;
+        z-index: 1;
+        .aboutContent{
+            width: 50%;
+            height: 100%;
+            background-color: #9b99996e;
+            transform: translateY(-100%);
+        }
+        .aboutContact{
+            width: 50%;
+            height: 100%;
+            background-color: #2a8b97a2;
+            transform: translateY(100%);
+        }
+    }
+    
     .left_col{
         width: 50px;
         height: 100%;
@@ -129,8 +157,7 @@ header{
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                gap: 15px;
-                
+                gap: 30px;                
             }
             .rotateText{
                 width: 40px;
@@ -138,16 +165,32 @@ header{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: #f3eef852;
+                background-color: #949494;
                 transform: rotate(-45deg);
                 border-radius: 4px;
-                border: 1px solid red;
-                span{
-                    font-size: 16px;
-                    font-weight: 600;
-                    color: #8a1cfc;
+                position: relative;
+                .xxx{
+                    width: 20px;
+                    height: 20px;
                     transform: rotate(45deg);
                 }
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 100%;
+                    height: 100%;
+                    background: #949494;
+                    border-radius: 4px;
+                    transform: translate(-50%, -50%) rotate(45deg);
+                    z-index: -1;
+                }
+                &:hover{
+                    background-color: transparent;
+                }
+                
             }
         }
     }
@@ -174,15 +217,18 @@ header{
                 height: fit-content;
                 color: white;
                 z-index: 9;
-                h1{
-                    font-size: 70px;
+                #myTitle{
+                    font-size: 40px;
                     font-weight: 700;
                     margin-bottom: 10px;
+                    color: black;
+                }
+                #myNameSvg{
+                    margin: 0;
+                    padding: 0;
                 }
                 #myName{
                     fill: none;
-                    stroke: #111;
-                    stroke-width: 2;
                     stroke-dasharray: 500;
                     stroke-dashoffset: 500;
                     font-family: Arial, sans-serif;
@@ -216,27 +262,20 @@ header{
                 transform: translateY(-50%);
             }
         }
-        .profilePic{
-            width: 40%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9;
-            .box{
-                width: 400px;
-                height: 400px;
-                background-color: #21004400;
-                z-index: 999;
-            }  
-        }
+        
     }
     .right_col{
         width: 50px;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         .awardImg{
-            width: 100%;
+            width: 100px;
             height: fit-content;
+            position: absolute;
+            top: 100px;
+            right: 0;
             img{
                 width: 100%;
                 height: 100%;
@@ -245,7 +284,7 @@ header{
         }
         .right_col_container{
             width: 100%;
-            height: 100%;
+            height: fit-content;
             display: flex;
             flex-direction: column;
             justify-content: center;
