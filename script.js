@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // pronob biswas
 
+
 // Mouse tracker (custom cursor)
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(SplitText);
@@ -35,8 +36,12 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.appendChild(cursor);
 
   document.addEventListener("mousemove", (e) => {
-    cursor.style.left = e.clientX + "px";
-    cursor.style.top = e.clientY + "px";
+    gsap.to(cursor,{
+      x:e.clientX,
+      y:e.clientY,
+      ease:"back.out(1.7)",
+      duration:0.5,
+    })
   });
 
   // Optional: cursor scale on click
@@ -46,6 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("mouseup", () => {
     cursor.style.transform = "translate(-50%, -50%) scale(1)";
   });
+
+
   // ===draw text===
   gsap.to("#myName", {
     strokeDashoffset: 0,
@@ -66,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
-
+// move banner logo 
 document.addEventListener("DOMContentLoaded", function () {
   gsap.fromTo(
     ".bannerLogo_container",
@@ -81,96 +88,19 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 });
 
-// function showAboutMe() {
-//   let aboutme = document.getElementById("aboutMe");
-//   aboutme.style.zIndex = "99999";
-//   aboutme.style.display = "block";
-//   gsap.to(aboutme, {
-//     zIndex: 9999,
-//     display: "block",
-//     opacity: 0,
-//     duration: 1,
-//     delay: 0,
-//     ease: "power1.inOut",
-//   });
-//   gsap.to(".aboutContent", {
-//     y: "0",
-//     opacity: 1,
-//     duration: 1,
-//     ease: "power1.inOut",
-//   });
-//   gsap.to(".aboutContact", {
-//     y: "0",
-//     opacity: 1,
-//     duration: 1,
-//     ease: "power1.inOut",
-//   });
-// }
-// function hideAboutMe() {
-//   let aboutme = document.getElementById("aboutMe");
-//   aboutme.style.zIndex = "-1";
-//   gsap.to(".aboutContact", {
-//     y: "100%",
-//     opacity: 0,
-//     duration: 1,
-//     ease: "power1.inOut",
-//   });
-//   gsap.to(".aboutContent", {
-//     y: "-100%",
-//     opacity: 0,
-//     duration: 1,
-//     ease: "power1.inOut",
-//   });
-//    gsap.to(aboutme, {
-//     zIndex: "-1",
-//     opacity: 0,
-//     duration: 1,
-//     delay:2,
-//     ease: "power1.inOut",
-//   });
-// }
-// function hideAboutMe() {
-//   let aboutme = document.getElementById("aboutMe");
-//   gsap.to(".aboutContact", {
-//     y: "100%",
-//     opacity: 0,
-//     duration: 1,
-//     ease: "power1.inOut",
-//   });
 
-//   gsap.to(".aboutContent", {
-//     y: "-100%",
-//     opacity: 0,
-//     duration: 1,
-//     ease: "power1.inOut",
-//   });
-
-//   gsap.to(aboutme, {
-//     zIndex: -1,
-//     display: "none",
-//     opacity: 0,
-//     duration: 1,
-//     delay: 1,
-//     ease: "power1.inOut",
-//   });
-// }
-
+// show aboutme content 
 function showAboutMe() {
   const aboutme = document.getElementById("aboutMe");
-
-  // Set initial visibility styles
   aboutme.style.display = "block";
   aboutme.style.zIndex = "99999";
   aboutme.style.opacity = "0";
-
-  // Fade in container
   gsap.to(aboutme, {
     opacity: 1,
     duration: 1,
     ease: "power1.inOut",
   });
 
-  // Animate children
   gsap.to(".aboutContent", {
     y: "0%",
     opacity: 1,
@@ -185,11 +115,9 @@ function showAboutMe() {
     ease: "power1.inOut",
   });
 }
-
+// hide about me 
 function hideAboutMe() {
   const aboutme = document.getElementById("aboutMe");
-
-  // Animate children out
   gsap.to(".aboutContent", {
     y: "-100%",
     opacity: 0,
@@ -204,7 +132,6 @@ function hideAboutMe() {
     ease: "power1.inOut",
   });
 
-  // After children animate out, fade and hide container
   gsap.to(aboutme, {
     opacity: 0,
     duration: 1,
@@ -217,7 +144,7 @@ function hideAboutMe() {
   });
 }
 
-
+// move angle 
 gsap.fromTo(
   "#angle1",
   { attr: { fill: "transparent" }, opacity: 0 },
@@ -228,6 +155,7 @@ gsap.fromTo(
     ease: "power1.inOut",
   }
 );
+// draw svg 
 function drawSvgPath(selector, duration = 2) {
   const path = document.querySelector(selector);
   if (!path) return;
@@ -243,3 +171,20 @@ function drawSvgPath(selector, duration = 2) {
 setTimeout(() => {
   drawSvgPath("#path2", 2);
 }, 100);
+
+// ====animate sprate icon===
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.to(".icon1", {
+    scale: 1.5,
+    duration: 2,
+    repeat: -1,
+    yoyo: true,
+    ease: "linear"
+  });
+  gsap.to(".icon2",{
+    rotate:360,
+    duration:3,
+    repeat: -1,
+    ease: "linear"
+  });
+});
