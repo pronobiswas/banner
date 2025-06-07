@@ -1,36 +1,35 @@
 // Animate SVG drawing and fill with GSAP
-document.addEventListener("DOMContentLoaded", function() {
-    const svg = document.querySelector("#headersvg");
-    if (!svg) return;
-    
-    const paths = svg.querySelectorAll("#headersvg path");
-    paths.forEach((path, i) => {
-        const length = path.getTotalLength();
-        path.style.strokeDasharray = length;
-        path.style.strokeDashoffset = length;
-        path.style.fillOpacity = 0;
-        // Animate stroke drawing
+document.addEventListener("DOMContentLoaded", function () {
+  const svg = document.querySelector("#headersvg");
+  if (!svg) return;
+
+  const paths = svg.querySelectorAll("#headersvg path");
+  paths.forEach((path, i) => {
+    const length = path.getTotalLength();
+    path.style.strokeDasharray = length;
+    path.style.strokeDashoffset = length;
+    path.style.fillOpacity = 0;
+    // Animate stroke drawing
+    gsap.to(path, {
+      strokeDashoffset: 0,
+      duration: 0.5,
+      delay: i * 0.15,
+      ease: "power2.out",
+      onComplete: () => {
         gsap.to(path, {
-            strokeDashoffset: 0,
-            duration: 0.5,
-            delay: i * 0.15,
-            ease: "power2.out",
-            onComplete: () => {
-                gsap.to(path, {
-                    fillOpacity: 1,
-                    duration: 0.6,
-                    ease: "power1.inOut"
-                });
-            }
+          fillOpacity: 1,
+          duration: 0.6,
+          ease: "power1.inOut",
         });
+      },
     });
+  });
 });
 // pronob biswas
 
-
 // Mouse tracker (custom cursor)
 document.addEventListener("DOMContentLoaded", function () {
-    gsap.registerPlugin(SplitText);
+  gsap.registerPlugin(SplitText);
   const cursor = document.createElement("div");
   cursor.classList.add("custom-cursor");
   document.body.appendChild(cursor);
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     onSplit(self) {
       gsap.from(self.chars, {
         color: "rgb(255, 255, 255)",
-        duration: .8,
+        duration: 0.8,
         x: -100,
         autoAlpha: 0,
         stagger: 0.1,
@@ -82,36 +81,143 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 });
 
+// function showAboutMe() {
+//   let aboutme = document.getElementById("aboutMe");
+//   aboutme.style.zIndex = "99999";
+//   aboutme.style.display = "block";
+//   gsap.to(aboutme, {
+//     zIndex: 9999,
+//     display: "block",
+//     opacity: 0,
+//     duration: 1,
+//     delay: 0,
+//     ease: "power1.inOut",
+//   });
+//   gsap.to(".aboutContent", {
+//     y: "0",
+//     opacity: 1,
+//     duration: 1,
+//     ease: "power1.inOut",
+//   });
+//   gsap.to(".aboutContact", {
+//     y: "0",
+//     opacity: 1,
+//     duration: 1,
+//     ease: "power1.inOut",
+//   });
+// }
+// function hideAboutMe() {
+//   let aboutme = document.getElementById("aboutMe");
+//   aboutme.style.zIndex = "-1";
+//   gsap.to(".aboutContact", {
+//     y: "100%",
+//     opacity: 0,
+//     duration: 1,
+//     ease: "power1.inOut",
+//   });
+//   gsap.to(".aboutContent", {
+//     y: "-100%",
+//     opacity: 0,
+//     duration: 1,
+//     ease: "power1.inOut",
+//   });
+//    gsap.to(aboutme, {
+//     zIndex: "-1",
+//     opacity: 0,
+//     duration: 1,
+//     delay:2,
+//     ease: "power1.inOut",
+//   });
+// }
+// function hideAboutMe() {
+//   let aboutme = document.getElementById("aboutMe");
+//   gsap.to(".aboutContact", {
+//     y: "100%",
+//     opacity: 0,
+//     duration: 1,
+//     ease: "power1.inOut",
+//   });
+
+//   gsap.to(".aboutContent", {
+//     y: "-100%",
+//     opacity: 0,
+//     duration: 1,
+//     ease: "power1.inOut",
+//   });
+
+//   gsap.to(aboutme, {
+//     zIndex: -1,
+//     display: "none",
+//     opacity: 0,
+//     duration: 1,
+//     delay: 1,
+//     ease: "power1.inOut",
+//   });
+// }
+
 function showAboutMe() {
-    let aboutme = document.getElementById("aboutMe");
-    aboutme.style.zIndex = "99999"
-  gsap.to(".aboutContent", {
-    y: "0",
+  const aboutme = document.getElementById("aboutMe");
+
+  // Set initial visibility styles
+  aboutme.style.display = "block";
+  aboutme.style.zIndex = "99999";
+  aboutme.style.opacity = "0";
+
+  // Fade in container
+  gsap.to(aboutme, {
     opacity: 1,
     duration: 1,
     ease: "power1.inOut",
   });
+
+  // Animate children
+  gsap.to(".aboutContent", {
+    y: "0%",
+    opacity: 1,
+    duration: 1,
+    ease: "power1.inOut",
+  });
+
   gsap.to(".aboutContact", {
-    y: "0",
+    y: "0%",
     opacity: 1,
     duration: 1,
     ease: "power1.inOut",
   });
 }
+
 function hideAboutMe() {
+  const aboutme = document.getElementById("aboutMe");
+
+  // Animate children out
+  gsap.to(".aboutContent", {
+    y: "-100%",
+    opacity: 0,
+    duration: 1,
+    ease: "power1.inOut",
+  });
+
   gsap.to(".aboutContact", {
     y: "100%",
     opacity: 0,
     duration: 1,
     ease: "power1.inOut",
   });
-  gsap.to("#slideUp", {
-    y: "0%",
+
+  // After children animate out, fade and hide container
+  gsap.to(aboutme, {
     opacity: 0,
     duration: 1,
+    delay: 1,
     ease: "power1.inOut",
+    onComplete: () => {
+      aboutme.style.display = "none";
+      aboutme.style.zIndex = "-1";
+    },
   });
 }
+
+
 gsap.fromTo(
   "#angle1",
   { attr: { fill: "transparent" }, opacity: 0 },
