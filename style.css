@@ -5,7 +5,8 @@
   font-family: "Montserrat", sans-serif;
 }
 
-html, body {
+html,
+body {
   cursor: url("cursor.png"), auto;
 }
 
@@ -20,7 +21,7 @@ html, body {
   border: 3px solid rgb(255, 0, 0);
   border-radius: 50%;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 999;
   transform: translate(-50%, -50%);
   mix-blend-mode: difference;
 }
@@ -38,22 +39,20 @@ html, body {
 
 header {
   width: 100%;
-  height: -moz-fit-content;
   height: fit-content;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   background-color: transparent;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: 99999;
+  z-index: 999;
 }
 header nav {
   width: 100%;
   max-width: 1200px;
-  height: -moz-fit-content;
   height: fit-content;
   padding: 20px 5px;
   display: flex;
@@ -66,9 +65,7 @@ header nav .logo {
   color: #ffffff;
 }
 header nav .nav_links {
-  width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   display: flex;
   align-items: center;
@@ -81,7 +78,6 @@ header nav .nav_links .nav_item a {
   font-weight: bold;
   position: relative;
   display: block;
-  width: -moz-fit-content;
   width: fit-content;
 }
 header nav .nav_links .nav_item a::before, header nav .nav_links .nav_item a::after {
@@ -123,28 +119,102 @@ header #headersvg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
+  overflow: hidden !important;
+  position: relative;
   z-index: 1;
 }
 #banner .sprateIcon {
-  position: fixed;
-  top: 100px;
-  left: 100px;
+  position: absolute;
   z-index: 99;
 }
 #banner .icon1 {
-  top: 100px;
-  left: 100px;
+  top: 2%;
+  left: 4%;
+}
+#banner .icon2 {
+  top: 25%;
+  left: 30%;
+  transform: scale(0.5);
+}
+#banner .icon3 {
+  top: 52%;
+  left: 56%;
+  transform: scale(0.5);
+}
+#banner .icon4 {
+  top: 50%;
+  left: 18%;
+}
+#banner .icon5 {
+  top: 55%;
+  right: 25%;
+}
+#banner .icon6 {
+  top: 22%;
+  left: 45%;
+}
+#banner .icon7 {
+  bottom: 15%;
+  left: 45%;
+}
+#banner .icon8 {
+  bottom: 5%;
+  left: 3%;
+}
+#banner .icon9 {
+  top: 12%;
+  left: 12%;
+  stroke: #00cafd;
+}
+#banner .icon10 {
+  top: 20%;
+  right: 20%;
+  stroke: #fd5d00;
+}
+#banner .icon11 {
+  bottom: 30%;
+  right: 20%;
+}
+#banner .icon12 {
+  bottom: 15%;
+  left: 20%;
+}
+#banner .icon13 {
+  top: 35%;
+  left: 10%;
+}
+#banner .icon14 {
+  top: 8%;
+  right: 5%;
+}
+#banner .icon15 {
+  bottom: 5%;
+  right: 5%;
+}
+#banner .icon16 {
+  bottom: 15%;
+  left: 20%;
+}
+#banner .icon17 {
+  bottom: 80px;
+  left: 20%;
+}
+#banner .icon18 {
+  bottom: 100px;
+  left: 50%;
+}
+#banner .icon19 {
+  bottom: 85px;
+  left: 80%;
 }
 #banner #aboutMe {
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.0823529412);
-  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.1450980392);
+  z-index: 9999 !important;
   position: absolute;
   display: none;
   overflow: hidden;
-  z-index: 1;
 }
 #banner #aboutMe .aboutmeWrapper {
   width: 100%;
@@ -160,11 +230,17 @@ header #headersvg {
   background-color: rgba(155, 153, 153, 0.431372549);
   transform: translateY(-100%);
 }
+#banner #aboutMe .aboutmeWrapper .aboutContent .talkAboutme {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
 #banner #aboutMe .aboutmeWrapper .aboutContact {
   width: 50%;
   height: 100%;
   background-color: rgba(42, 139, 151, 0.6352941176);
   transform: translateY(100%);
+  z-index: 999;
 }
 #banner #aboutMe .aboutmeWrapper .aboutContact #closeAboutme {
   border: none;
@@ -173,6 +249,7 @@ header #headersvg {
   position: absolute;
   top: 10px;
   right: 10px;
+  z-index: 99999 !important;
 }
 #banner #aboutMe .aboutmeWrapper .aboutContact #closeAboutme:hover {
   cursor: pointer;
@@ -192,7 +269,6 @@ header #headersvg {
 }
 #banner .left_col .left_col_container .rotateText_container {
   width: 100%;
-  height: -moz-fit-content;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -253,7 +329,6 @@ header #headersvg {
 }
 #banner .layer1 .bannerLogo .bannerText {
   width: 100%;
-  height: -moz-fit-content;
   height: fit-content;
   color: white;
   z-index: 9;
@@ -296,9 +371,7 @@ header #headersvg {
   right: -15px;
 }
 #banner .layer1 .bannerLogo .bannerLogo_container {
-  width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   background-color: rgba(119, 8, 238, 0);
   position: absolute;
@@ -315,7 +388,6 @@ header #headersvg {
 }
 #banner .right_col .awardImg {
   width: 100px;
-  height: -moz-fit-content;
   height: fit-content;
   position: absolute;
   top: 100px;
@@ -324,12 +396,10 @@ header #headersvg {
 #banner .right_col .awardImg img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #banner .right_col .right_col_container {
   width: 100%;
-  height: -moz-fit-content;
   height: fit-content;
   display: flex;
   flex-direction: column;

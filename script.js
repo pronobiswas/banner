@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // pronob biswas
 
-
 // Mouse tracker (custom cursor)
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(SplitText);
@@ -36,12 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.appendChild(cursor);
 
   document.addEventListener("mousemove", (e) => {
-    gsap.to(cursor,{
-      x:e.clientX,
-      y:e.clientY,
-      ease:"back.out(1.7)",
-      duration:0.5,
-    })
+    gsap.to(cursor, {
+      x: e.clientX,
+      y: e.clientY,
+      ease: "back.out(1.7)",
+      duration: 0.5,
+    });
   });
 
   // Optional: cursor scale on click
@@ -51,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("mouseup", () => {
     cursor.style.transform = "translate(-50%, -50%) scale(1)";
   });
-
 
   // ===draw text===
   gsap.to("#myName", {
@@ -73,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
-// move banner logo 
+// move banner logo
 document.addEventListener("DOMContentLoaded", function () {
   gsap.fromTo(
     ".bannerLogo_container",
@@ -88,11 +86,12 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 });
 
-
-// show aboutme content 
+// show aboutme content
 function showAboutMe() {
   const aboutme = document.getElementById("aboutMe");
+  const header = document.querySelector("header");
   aboutme.style.display = "block";
+  header.style.zIndex = "-1";
   aboutme.style.zIndex = "99999";
   aboutme.style.opacity = "0";
   gsap.to(aboutme, {
@@ -115,9 +114,11 @@ function showAboutMe() {
     ease: "power1.inOut",
   });
 }
-// hide about me 
+// hide about me
 function hideAboutMe() {
   const aboutme = document.getElementById("aboutMe");
+  const header = document.querySelector("header");
+  header.style.zIndex = "999";
   gsap.to(".aboutContent", {
     y: "-100%",
     opacity: 0,
@@ -144,7 +145,7 @@ function hideAboutMe() {
   });
 }
 
-// move angle 
+// move angle
 gsap.fromTo(
   "#angle1",
   { attr: { fill: "transparent" }, opacity: 0 },
@@ -155,7 +156,7 @@ gsap.fromTo(
     ease: "power1.inOut",
   }
 );
-// draw svg 
+// draw svg
 function drawSvgPath(selector, duration = 2) {
   const path = document.querySelector(selector);
   if (!path) return;
@@ -177,14 +178,53 @@ document.addEventListener("DOMContentLoaded", function () {
   gsap.to(".icon1", {
     scale: 1.5,
     duration: 2,
+    yoyo: true,
+    ease: "linear",
+  });
+  gsap.to(".icon2", {
+    rotate: 360,
+    duration: 5,
+    repeat: -1,
+    ease: "linear",
+  });
+  gsap.to(".icon3", {
+    rotate: 360,
+    duration: 3,
+    repeat: -1,
+    ease: "linear",
+  });
+  gsap.to(".icon17", {
+    y: 80,
+    duration: 2,
     repeat: -1,
     yoyo: true,
-    ease: "linear"
+    ease: "bounce.out",
   });
-  gsap.to(".icon2",{
-    rotate:360,
-    duration:3,
+  gsap.to(".icon18", {
+    y: 100,
+    duration: 2.5,
+    yoyo: true,
     repeat: -1,
-    ease: "linear"
+    ease: "bounce.out",
+  });
+  gsap.to(".icon19", {
+    y: 85,
+    yoyo: true,
+    duration: 3,
+    repeat: -1,
+    ease: "bounce.out",
   });
 });
+
+// document.addEventListener("mousemove", function (e) {
+//   const icons = document.querySelectorAll(".sprateIcon");
+//   icons.forEach((icon, i) => {
+//     const speed = 0.05 + i * 0.02;
+//     gsap.to(icon, {
+//       x: (e.clientX - window.innerWidth / 2) * speed,
+//       y: (e.clientY - window.innerHeight / 2) * speed,
+//       duration: 0.6,
+//       ease: "power2.out",
+//     });
+//   });
+// });
