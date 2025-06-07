@@ -113,6 +113,24 @@ function showAboutMe() {
     duration: 1,
     ease: "power1.inOut",
   });
+  const tabsvg = document.getElementById("tab");
+  let paths = document.querySelectorAll("#tab path");
+  let rects = document.querySelectorAll("#tab rect");
+  function drawSvgPath(paths, duration = 2, delay = 2) {
+    paths.forEach((idx) => {
+      const length = idx.getTotalLength();
+      idx.style.strokeDasharray = length;
+      idx.style.strokeDashoffset = length;
+      gsap.to(idx, {
+        strokeDashoffset: 0,
+        duration: duration,
+        delay: delay,
+        ease: "power1.inOut",
+      });
+    });
+  }
+  drawSvgPath(paths, 2, 1);
+  drawSvgPath(rects, 1, 1);
 }
 // hide about me
 function hideAboutMe() {
@@ -215,16 +233,18 @@ document.addEventListener("DOMContentLoaded", function () {
     ease: "bounce.out",
   });
 });
+// =====move sprate icon with mouse move===
+document.addEventListener("mousemove", function (e) {
+  const icons = document.querySelectorAll(".sprateIcon");
+  icons.forEach((icon, i) => {
+    const speed = 0.05 + i * 0.02;
+    gsap.to(icon, {
+      x: (e.clientX - window.innerWidth / 2) * speed,
+      y: (e.clientY - window.innerHeight / 2) * speed,
+      duration: 0.6,
+      ease: "power2.out",
+    });
+  });
+});
 
-// document.addEventListener("mousemove", function (e) {
-//   const icons = document.querySelectorAll(".sprateIcon");
-//   icons.forEach((icon, i) => {
-//     const speed = 0.05 + i * 0.02;
-//     gsap.to(icon, {
-//       x: (e.clientX - window.innerWidth / 2) * speed,
-//       y: (e.clientY - window.innerHeight / 2) * speed,
-//       duration: 0.6,
-//       ease: "power2.out",
-//     });
-//   });
-// });
+// Observe #tab for display changes and draw the SVG path with GSAP when shown

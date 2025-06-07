@@ -238,9 +238,39 @@ header #headersvg {
 #banner #aboutMe .aboutmeWrapper .aboutContact {
   width: 50%;
   height: 100%;
-  background-color: rgba(42, 139, 151, 0.6352941176);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(42, 138, 151, 0.8274509804);
   transform: translateY(100%);
   z-index: 999;
+}
+#banner #aboutMe .aboutmeWrapper .aboutContact .aboutContactWrapper {
+  width: 100%;
+  max-width: 500px;
+  height: fit-content;
+  position: relative;
+  padding-left: 50px;
+}
+#banner #aboutMe .aboutmeWrapper .aboutContact .aboutContactWrapper #tab {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#banner #aboutMe .aboutmeWrapper .aboutContact .aboutContactWrapper .whoami {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+#banner #aboutMe .aboutmeWrapper .aboutContact .aboutContactWrapper .whoami .myPic {
+  width: 240px;
+  height: 240px;
+  background-color: #000000;
+}
+#banner #aboutMe .aboutmeWrapper .aboutContact .aboutContactWrapper .whoami .description {
+  width: 100%;
 }
 #banner #aboutMe .aboutmeWrapper .aboutContact #closeAboutme {
   border: none;

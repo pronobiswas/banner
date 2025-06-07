@@ -238,9 +238,40 @@ header {
       .aboutContact {
         width: 50%;
         height: 100%;
-        background-color: #2a8b97a2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #2a8a97d3;
         transform: translateY(100%);
         z-index: 999;
+
+        .aboutContactWrapper {
+          width: 100%;
+          max-width: 500px;
+          height: fit-content;
+          position: relative;
+          padding-left: 50px;
+          #tab {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          .whoami {
+            width: 100%;
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            .myPic {
+              width: 240px;
+              height: 240px;
+              background-color: #000000;
+            }
+            .description {
+              width: 100%;
+            }
+          }
+        }
         #closeAboutme {
           border: none;
           outline: none;
