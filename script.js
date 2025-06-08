@@ -234,7 +234,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 // =====move sprate icon with mouse move===
-document.addEventListener("mousemove", function (e) {
+let banner = document.getElementById('banner')
+banner.addEventListener("mousemove", function (e) {
   const icons = document.querySelectorAll(".sprateIcon");
   icons.forEach((icon, i) => {
     const speed = 0.05 + i * 0.02;
@@ -247,4 +248,97 @@ document.addEventListener("mousemove", function (e) {
   });
 });
 
-// Observe #tab for display changes and draw the SVG path with GSAP when shown
+// ====handle form=====
+document.addEventListener("DOMContentLoaded", function () {
+  const inputs = document.querySelectorAll(".pro_input");
+
+  inputs.forEach((input) => {
+    const label = input.parentElement.querySelector(".pro_label");
+
+    // Function to update label position based on value
+    const updateLabel = () => {
+      if (input.value.trim() !== "") {
+        label.style.top = "-3px";
+        label.style.fontSize = "13px";
+        label.style.color = "#ffffff";
+      } else {
+        label.style.top = "20px";
+        label.style.fontSize = "16px";
+        label.style.color = "#ffffff";
+      }
+    };
+
+    // Initialize on page load
+    updateLabel();
+
+    // Bind events
+    input.addEventListener("input", updateLabel);
+    input.addEventListener("blur", updateLabel);
+  });
+});
+
+
+
+  window.addEventListener("load", () => {
+    const wrapper = document.querySelector(".slider_wrapper");
+    const wrapper2 = document.querySelector(".slider_wrapper2");
+    const track = document.querySelector(".slider_track");
+    const trackWidth = track.offsetWidth;
+
+    gsap.to(wrapper, {
+      x: `-${trackWidth}px`,
+      duration: 20,
+      ease: "none",
+      repeat: -1
+    });
+    
+  });
+   window.addEventListener("load", () => {
+    const wrapper2 = document.querySelector(".slider_wrapper2");
+    const track2 = document.querySelector(".slider_track2");
+    const trackWidth2 = track2.offsetWidth;
+
+    gsap.to(wrapper2, {
+      x: `-${trackWidth2}px`,
+      duration: 20,
+      ease: "none",
+      repeat: -1
+    });
+    
+  });
+
+var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      freeMode: true,
+      autoplay: {
+        delay: 500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+
+    // Make sure GSAP and ScrollTrigger are loaded
+gsap.registerPlugin(ScrollTrigger);
+
+window.addEventListener("load", () => {
+  const wrapper = document.querySelector(".exprement_wrapper");
+  const section = document.getElementById("exprement");
+  const totalWidth = wrapper.scrollWidth;
+  const viewportWidth = window.innerWidth;
+
+  gsap.to(wrapper, {
+    x: () => viewportWidth - totalWidth,
+    ease: "none",
+    scrollTrigger: {
+      trigger: section,
+      start: "top 70%",
+      end: () => `+=${totalWidth - viewportWidth}`,
+      scrub: true,
+    }
+  });
+});
