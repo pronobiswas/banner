@@ -201,16 +201,19 @@ header #headersvg {
   left: 20%;
 }
 #banner .icon17 {
+  position: absolute;
   bottom: 80px;
-  left: 20%;
+  left: 30%;
 }
 #banner .icon18 {
+  position: absolute;
   bottom: 100px;
   left: 50%;
 }
 #banner .icon19 {
+  position: absolute;
   bottom: 85px;
-  left: 80%;
+  left: 60%;
 }
 #banner #aboutMe {
   width: 100%;
@@ -232,13 +235,43 @@ header #headersvg {
 #banner #aboutMe .aboutmeWrapper .aboutContent {
   width: 50%;
   height: 100%;
-  background-color: rgba(155, 153, 153, 0.431372549);
+  background-color: rgba(155, 153, 153, 0.9450980392);
   transform: translateY(-100%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 #banner #aboutMe .aboutmeWrapper .aboutContent .talkAboutme {
   width: 100%;
-  height: 100%;
-  text-align: center;
+  max-width: 500px;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#banner #aboutMe .aboutmeWrapper .aboutContent .talkAboutme h2, #banner #aboutMe .aboutmeWrapper .aboutContent .talkAboutme h3, #banner #aboutMe .aboutmeWrapper .aboutContent .talkAboutme h4, #banner #aboutMe .aboutmeWrapper .aboutContent .talkAboutme p, #banner #aboutMe .aboutmeWrapper .aboutContent .talkAboutme span {
+  background-color: #000000;
+}
+#banner #aboutMe .aboutmeWrapper .aboutContent .talkAboutme ul {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+#banner #aboutMe .aboutmeWrapper .aboutContent .talkAboutme ul li {
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 1px solid red;
+  padding: 4px 10px;
+  background-color: #000000;
 }
 #banner #aboutMe .aboutmeWrapper .aboutContact {
   width: 50%;
@@ -246,7 +279,7 @@ header #headersvg {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(42, 138, 151, 0.8274509804);
+  background-color: rgba(42, 138, 151, 0.9607843137);
   transform: translateY(100%);
   z-index: 999;
 }
@@ -272,6 +305,7 @@ header #headersvg {
   display: flex;
   align-items: start;
   justify-content: start;
+  gap: 10px;
 }
 #banner #aboutMe .aboutmeWrapper .aboutContact .aboutContactWrapper .whoami .myPic {
   width: 200px;
@@ -280,7 +314,17 @@ header #headersvg {
 }
 #banner #aboutMe .aboutmeWrapper .aboutContact .aboutContactWrapper .whoami .description {
   width: 70%;
-  background-color: rgba(0, 0, 0, 0.1921568627);
+  background-color: inherit;
+}
+#banner #aboutMe .aboutmeWrapper .aboutContact .aboutContactWrapper .whoami .description h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: white;
+  overflow: hidden;
+}
+#banner #aboutMe .aboutmeWrapper .aboutContact .aboutContactWrapper .whoami .description p {
+  font-size: 18px;
+  overflow: hidden;
 }
 #banner #aboutMe .aboutmeWrapper .aboutContact .aboutContactWrapper .pro_form {
   width: 100%;

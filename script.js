@@ -1,4 +1,5 @@
 // Animate SVG drawing and fill with GSAP
+gsap.registerPlugin(SplitText);
 document.addEventListener("DOMContentLoaded", function () {
   const svg = document.querySelector("#headersvg");
   if (!svg) return;
@@ -116,6 +117,16 @@ function showAboutMe() {
   const tabsvg = document.getElementById("tab");
   let paths = document.querySelectorAll("#tab path");
   let rects = document.querySelectorAll("#tab rect");
+  const aboutSvg = document.querySelector("#aboutSvg");
+  if (!aboutSvg) return;
+  const aboutSvgPaths = document.querySelectorAll("#aboutSvg path");
+  const talkAboutmeh2 = document.querySelectorAll(".talkAboutme h2");
+  const talkAboutmeh3 = document.querySelectorAll(".talkAboutme h3");
+  const talkAboutmeh4 = document.querySelectorAll(".talkAboutme h4");
+  const talkAboutmeSpan = document.querySelectorAll(".talkAboutme span");
+  const talkAboutmeP = document.querySelectorAll(".talkAboutme p");
+  const talkAboutmeLi = document.querySelectorAll(".talkAboutme li");
+  // ==draw the tab==
   function drawSvgPath(paths, duration = 2, delay = 2) {
     paths.forEach((idx) => {
       const length = idx.getTotalLength();
@@ -131,6 +142,73 @@ function showAboutMe() {
   }
   drawSvgPath(paths, 2, 1);
   drawSvgPath(rects, 1, 1);
+
+  // ==draw the header footer svg==
+  aboutSvgPaths.forEach((path, i) => {
+    const length = path.getTotalLength();
+    path.style.strokeDasharray = length;
+    path.style.strokeDashoffset = length;
+    path.style.fillOpacity = 0;
+    gsap.to(path, {
+      strokeDashoffset: 0,
+      duration: 0.5,
+      delay: i * 0.15,
+      ease: "power2.out",
+      onComplete: () => {
+        gsap.to(path, {
+          fillOpacity: 1,
+          duration: 0.6,
+          ease: "power1.inOut",
+        });
+      },
+    });
+  });
+
+  function removebgColor(elements) {
+    console.log(elements);
+
+    elements.forEach((elm) => {
+      gsap.to(elm, {
+        backgroundColor: "transparent",
+        duration: 3,
+        delay: 1,
+      });
+    });
+  }
+  removebgColor(talkAboutmeLi);
+  removebgColor(talkAboutmeh2);
+  removebgColor(talkAboutmeh3);
+  removebgColor(talkAboutmeh4);
+  removebgColor(talkAboutmeSpan);
+  removebgColor(talkAboutmeP);
+
+  const descriptionTitle = document.querySelector(".description h4");
+  const descriptionTxt = document.querySelectorAll(".description p");
+
+  SplitText.create(".description h4", {
+    type: "words, chars ,lines",
+    onSplit(self) {
+      gsap.from(self.chars, {
+        duration: 2,
+        y: 100,
+        autoAlpha: 0,
+      });
+    },
+  });
+  descriptionTxt.forEach((eachline) => {
+    SplitText.create(eachline, {
+      type: "words, chars ,lines",
+      onSplit(self) {
+        gsap.from(self.lines, {
+          duration: 2,
+          y: 100,
+          delay:1,
+          autoAlpha: 0,
+          stagger: 0.02,
+        });
+      },
+    });
+  });
 }
 // hide about me
 function hideAboutMe() {
@@ -234,7 +312,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 // =====move sprate icon with mouse move===
-let banner = document.getElementById('banner')
+let banner = document.getElementById("banner");
 banner.addEventListener("mousemove", function (e) {
   const icons = document.querySelectorAll(".sprateIcon");
   icons.forEach((icon, i) => {
@@ -277,52 +355,33 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+window.addEventListener("load", () => {
+  const wrapper = document.querySelector(".slider_wrapper");
+  const wrapper2 = document.querySelector(".slider_wrapper2");
+  const track = document.querySelector(".slider_track");
+  const trackWidth = track.offsetWidth;
 
-
-  window.addEventListener("load", () => {
-    const wrapper = document.querySelector(".slider_wrapper");
-    const wrapper2 = document.querySelector(".slider_wrapper2");
-    const track = document.querySelector(".slider_track");
-    const trackWidth = track.offsetWidth;
-
-    gsap.to(wrapper, {
-      x: `-${trackWidth}px`,
-      duration: 20,
-      ease: "none",
-      repeat: -1
-    });
-    
+  gsap.to(wrapper, {
+    x: `-${trackWidth}px`,
+    duration: 20,
+    ease: "none",
+    repeat: -1,
   });
-   window.addEventListener("load", () => {
-    const wrapper2 = document.querySelector(".slider_wrapper2");
-    const track2 = document.querySelector(".slider_track2");
-    const trackWidth2 = track2.offsetWidth;
+});
+window.addEventListener("load", () => {
+  const wrapper2 = document.querySelector(".slider_wrapper2");
+  const track2 = document.querySelector(".slider_track2");
+  const trackWidth2 = track2.offsetWidth;
 
-    gsap.to(wrapper2, {
-      x: `-${trackWidth2}px`,
-      duration: 20,
-      ease: "none",
-      repeat: -1
-    });
-    
+  gsap.to(wrapper2, {
+    x: `-${trackWidth2}px`,
+    duration: 20,
+    ease: "none",
+    repeat: -1,
   });
+});
 
-var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      freeMode: true,
-      autoplay: {
-        delay: 500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-
-
-    // Make sure GSAP and ScrollTrigger are loaded
+// Make sure GSAP and ScrollTrigger are loaded
 gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener("load", () => {
@@ -336,9 +395,9 @@ window.addEventListener("load", () => {
     ease: "none",
     scrollTrigger: {
       trigger: section,
-      start: "top 70%",
+      start: "top 80%",
       end: () => `+=${totalWidth - viewportWidth}`,
       scrub: true,
-    }
+    },
   });
 });
