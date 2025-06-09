@@ -1,5 +1,6 @@
 // Animate SVG drawing and fill with GSAP
 gsap.registerPlugin(SplitText);
+gsap.registerPlugin(MotionPathPlugin);
 document.addEventListener("DOMContentLoaded", function () {
   const svg = document.querySelector("#headersvg");
   if (!svg) return;
@@ -401,3 +402,49 @@ window.addEventListener("load", () => {
     },
   });
 });
+
+let bigtext = document.querySelectorAll(".bigtext");
+bigtext.forEach((texts)=>{
+  SplitText.create(texts, {
+  type: "words, chars",
+  onSplit(self) {
+    gsap.from(self.chars, {
+      duration: 1, 
+      y: 100, 
+      autoAlpha: 0, 
+      stagger: 0.05
+    });
+  }
+});
+})
+document.querySelectorAll(".bigtext").forEach((texts) => {
+  SplitText.create(texts, {
+    type: "words, chars",
+    onSplit(self) {
+      gsap.from(self.chars, {
+        duration: 1,
+        y: 140,
+        autoAlpha: 0,
+        stagger: 0.05,
+        scrollTrigger: {
+          trigger: texts,
+          start: "top 100%",
+          end: "top 70%",
+          scrub: true,
+        }
+      });
+    }
+  });
+});
+
+   gsap.to("#circle", {
+    duration: 10,
+    repeat: -1,
+    ease: "power2.inOut",
+    motionPath: {
+      path: "#myPath",
+      align: "#myPath",
+      autoRotate: true,
+      alignOrigin: [0.5, 0.5]
+    }
+  });
