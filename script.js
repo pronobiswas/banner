@@ -1,6 +1,7 @@
 // Animate SVG drawing and fill with GSAP
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(MotionPathPlugin);
+gsap.registerPlugin(ScrollTrigger);
 document.addEventListener("DOMContentLoaded", function () {
   const svg = document.querySelector("#headersvg");
   if (!svg) return;
@@ -383,7 +384,7 @@ window.addEventListener("load", () => {
 });
 
 // Make sure GSAP and ScrollTrigger are loaded
-gsap.registerPlugin(ScrollTrigger);
+
 
 window.addEventListener("load", () => {
   const wrapper = document.querySelector(".exprement_wrapper");

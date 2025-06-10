@@ -142,14 +142,14 @@ header {
   }
   .icon4 {
     top: 50%;
-    left: 18%;
+    left: -1%;
   }
   .icon5 {
     top: 55%;
     right: 25%;
   }
   .icon6 {
-    top: 22%;
+    top: 2%;
     left: 45%;
   }
   .icon7 {
@@ -199,7 +199,7 @@ header {
   .icon17 {
     position: absolute;
     bottom: 80px;
-    left: 30%;
+    left: 35%;
   }
   .icon18 {
     position: absolute;
@@ -209,7 +209,7 @@ header {
   .icon19 {
     position: absolute;
     bottom: 85px;
-    left: 60%;
+    left: 65%;
   }
 
   #aboutMe {
@@ -571,70 +571,74 @@ header {
     color: white;
     text-align: center;
   }
-}
-
-#gsap_slider {
-  width: 100%;
-  overflow: hidden;
-  padding: 20px;
-  .slider_wrapper {
-    display: flex;
-    width: fit-content;
-    white-space: nowrap;
-  }
-
-  .slider_track {
-    display: flex;
-    gap: 20px;
-  }
-
-  .box {
-    width: calc(100vw / 5 - 24px);
-    min-width: 200px;
-    background: #00b89325;
-    color: white;
-    padding: 10px;
-    text-align: left;
-    border-radius: 10px;
-    transition: 0.3s all linear;
-    &:hover {
-      background-color: #00b893d2;
-    }
-    .describe_txt {
-      white-space: wrap;
-      text-wrap: wrap;
-    }
-  }
-}
-#gsap_slider2 {
-  width: 100%;
-  overflow: hidden;
-  padding: 20px;
-  .slider_wrapper2 {
-    display: flex;
-    width: fit-content;
-    white-space: nowrap;
-  }
-
-  .slider_track2 {
-    display: flex;
-    gap: 20px;
-  }
-
-  .box2 {
-    width: calc(100vw / 5 - 24px);
-    min-width: 200px;
-    background: #00b894;
-    color: white;
-    padding: 10px;
-    text-align: left;
-    border-radius: 10px;
-    .describe_txt {
-      white-space: wrap;
-      text-wrap: wrap;
+  #gsap_slider {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+    .slider_wrapper {
+      display: flex;
+      width: fit-content;
+      white-space: nowrap;
+      .slider_track {
+        display: flex;
+        gap: 20px;
+        .box {
+          width: calc(100vw / 5 - 24px);
+          min-width: 200px;
+          background: #00b89325;
+          color: white;
+          padding: 20px;
+          text-align: left;
+          border-radius: 10px;
+          transition: 0.3s all linear;
+          &:hover {
+            background-color: #00b893d2;
+          }
+          .projectName {
+            margin-bottom: 10px;
+          }
+          .whatIuse {
+            margin-bottom: 8px;
+          }
+          .describe_txt {
+            white-space: wrap;
+            text-wrap: wrap;
+          }
+        }
+      }
     }
   }
+  #gsap_slider2 {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+    .slider_wrapper2 {
+      display: flex;
+      width: fit-content;
+      white-space: nowrap;
+    }
+
+    .slider_track2 {
+      display: flex;
+      gap: 20px;
+    }
+
+    .box2 {
+      width: calc(100vw / 5 - 24px);
+      min-width: 200px;
+      background: #00b894;
+      color: white;
+      padding: 10px;
+      text-align: left;
+      border-radius: 10px;
+      .describe_txt {
+        white-space: wrap;
+        text-wrap: wrap;
+      }
+    }
+  }
 }
+
 #exprement {
   width: 100%;
   height: fit-content;
@@ -755,9 +759,31 @@ header {
       &:nth-child(2) {
         margin-left: 45%;
       }
-      &:nth-child(3) {
-        margin-left: 50%;
-      }
     }
   }
+  .video_mask_container {
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    background-color: #52525200;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .masked-video {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      mask: url(#textMask);
+      -webkit-mask: url(#textMask);
+      mask-type: alpha;
+    }
+    #maskTextSvg{
+      position: absolute;
+      top: 20px;
+      left: 0;
+    }
+  }
+  
 }
+// style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:2; "
