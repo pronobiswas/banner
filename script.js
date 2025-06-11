@@ -2,6 +2,81 @@
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollTrigger);
+
+const caseStudies = [
+    {
+        projectName:"Project name1",
+        whatIuse:"What I use",
+        FetchingProblem:"orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis" ,
+        soliution:"orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam"
+
+    },
+    {
+        projectName:"Project name1",
+        whatIuse:"What I use",
+        FetchingProblem:"orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis" ,
+        soliution:"orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam"
+
+    },
+    {
+        projectName:"Project name1",
+        whatIuse:"What I use",
+        FetchingProblem:"orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis" ,
+        soliution:"orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam"
+
+    },
+    {
+        projectName:"Project name1",
+        whatIuse:"What I use",
+        FetchingProblem:"orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis" ,
+        soliution:"orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam"
+
+    },
+    {
+        projectName:"Project name1",
+        whatIuse:"What I use",
+        FetchingProblem:"orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis" ,
+        soliution:"orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam"
+
+    },
+    {
+        projectName:"Project name1",
+        whatIuse:"What I use",
+        FetchingProblem:"orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis" ,
+        soliution:"orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam"
+
+    }
+]
+let slider_track = document.querySelectorAll('.slider_track');
+let slider_track2 = document.querySelectorAll('.slider_track2');
+
+let html = '';
+caseStudies.forEach((data) => {
+  html += `
+    <div class="box">
+      <h3 class="projectName">${data.projectName}</h3>
+      <h4 class="whatIuse">${data.whatIuse}</h4>
+      <p class="describe_txt"><b>Fetching Problem</b>${data.FetchingProblem}</p>
+      <p class="describe_txt"><b>soliution</b>${data.soliution}</p>
+    </div>
+  `;
+});
+slider_track.forEach((elem)=>{
+    elem.innerHTML = html;
+});
+slider_track2.forEach((elem)=>{
+    elem.innerHTML = html;
+})
+
+let exprement_box = document.querySelectorAll('.exprement_box');
+exprement_box.forEach((elem , idx) => {
+  elem.style.top = 0,
+  elem.style.left = `${idx * 20}%`;
+  elem.style.zIndex = `${idx}`;
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const svg = document.querySelector("#headersvg");
   if (!svg) return;
@@ -27,6 +102,20 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
   });
+  // ===draw the ovelayText===
+  gsap.to("#startOverlay text", {
+      strokeDashoffset: 0,
+      duration: 5,
+      ease: "power2.out"
+    });
+    // ===remove the ovelay===
+    gsap.to("#startOverlay", {
+      opacity:0,
+      x:"-100%",
+      duration: 1,
+      delay:1,
+      ease: "power2.out"
+    });
 });
 // pronob biswas
 
@@ -48,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Optional: cursor scale on click
   document.addEventListener("mousedown", () => {
-    cursor.style.transform = "translate(-50%, -50%) scale(0.8)";
+    cursor.style.transform = "translate(-50%, -50%) scale(0.5)";
   });
   document.addEventListener("mouseup", () => {
     cursor.style.transform = "translate(-50%, -50%) scale(1)";
@@ -83,11 +172,23 @@ document.addEventListener("DOMContentLoaded", function () {
       x: 300,
       scale: 1,
       opacity: 1,
+      delay:1,
       duration: 0.8,
       ease: "power1.in",
     }
   );
 });
+// move angle
+gsap.fromTo(
+  "#angle1",
+  { attr: { fill: "transparent" }, opacity: 0 },
+  {
+    attr: { fill: "transparent" },
+    opacity: 1,
+    duration: 1,
+    ease: "power1.inOut",
+  }
+);
 
 // show aboutme content
 function showAboutMe() {
@@ -243,34 +344,6 @@ function hideAboutMe() {
   });
 }
 
-// move angle
-gsap.fromTo(
-  "#angle1",
-  { attr: { fill: "transparent" }, opacity: 0 },
-  {
-    attr: { fill: "transparent" },
-    opacity: 1,
-    duration: 1,
-    ease: "power1.inOut",
-  }
-);
-// draw svg
-function drawSvgPath(selector, duration = 2) {
-  const path = document.querySelector(selector);
-  if (!path) return;
-  const length = path.getTotalLength();
-  path.style.strokeDasharray = length;
-  path.style.strokeDashoffset = length;
-  gsap.to(path, {
-    strokeDashoffset: 0,
-    duration: duration,
-    ease: "power1.inOut",
-  });
-}
-setTimeout(() => {
-  drawSvgPath("#path2", 2);
-}, 100);
-
 // ====animate sprate icon===
 document.addEventListener("DOMContentLoaded", function () {
   gsap.to(".icon1", {
@@ -312,6 +385,21 @@ document.addEventListener("DOMContentLoaded", function () {
     repeat: -1,
     ease: "bounce.out",
   });
+  let left_col = this.documentElement.querySelector(".left_col");
+  let right_col = this.documentElement.querySelector(".right_col");
+  left_col.style.opacity = 0;
+  right_col.style.opacity = 0;
+  gsap.to(left_col,{
+    opacity:1,
+    delay:2,
+    duration:5,
+  })
+  gsap.to(right_col,{
+    opacity:1,
+    delay:2,
+    duration:5,
+  })
+
 });
 // =====move sprate icon with mouse move===
 let banner = document.getElementById("banner");

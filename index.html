@@ -74,6 +74,11 @@
     </svg>
   </header>
   <section id="banner">
+    <div id="startOverlay">
+      <svg id="myname" viewBox="0 0 600 150">
+        <text id="mynameText" x="0" y="100" font-size="80">Pronob Biswas</text>
+      </svg>
+    </div>
     <!-- ====sprate icon===== -->
     <div class="sprateIcon icon1">
       <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -453,19 +458,8 @@
     <div class="layer1">
       <div class="bannerLogo">
         <div class="bannerText">
-          <div>
-            <svg id="myNameSvg" viewBox="0 0 600 110">
-              <defs>
-                <linearGradient id="textStroke" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style="stop-color: rgb(73, 0, 0); stop-opacity: 1" />
-                  <stop offset="50%" style="stop-color: rgb(59, 0, 61); stop-opacity: 1" />
-                  <stop offset="100%" style="stop-color: rgb(0, 0, 77); stop-opacity: 1" />
-                </linearGradient>
-              </defs>
-              <text id="myName" x="0" y="100" font-size="80" stroke-width="3" stroke="url(#textStroke) " fill="black">
-                Pronob Biswas
-              </text>
-            </svg>
+          <div class="nameContainer">
+            <h1 id="myNames">PronobBiswas</h1>
           </div>
           <h3 id="myTitle">An Interactive Web Developer</h3>
           <button class="aboutme" onclick="showAboutMe()">
@@ -577,229 +571,25 @@
       </g>
     </svg>
 
-
-
-    <section id="gsap_slider">
+    <div id="gsap_slider">
       <div class="slider_wrapper">
         <div class="slider_track">
-          <div class="box">
-            <h3 class="projectName">Project name</h3>
-            <h4 class="whatIuse">What I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
-          <div class="box">
-            <h3 class="projectName">Project name</h3>
-            <h4 class="whatIuse">What I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
-          <div class="box">
-            <h3 class="projectName">Project name</h3>
-            <h4 class="whatIuse">What I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
-          <div class="box">
-            <h3 class="projectName">Project name</h3>
-            <h4 class="whatIuse">What I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
-          <div class="box">
-            <h3 class="projectName">Project name</h3>
-            <h4 class="whatIuse">What I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
-
-
         </div>
-        <!-- Clone for infinite loop effect -->
         <div class="slider_track">
-          <div class="box">
-            <h3 class="projectName">Project name</h3>
-            <h4 class="whatIuse">What I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
-          <div class="box">
-            <h3 class="projectName">Project name</h3>
-            <h4 class="whatIuse">What I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
-          <div class="box">
-            <h3 class="projectName">Project name</h3>
-            <h4 class="whatIuse">What I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
-          <div class="box">
-            <h3 class="projectName">Project name</h3>
-            <h4 class="whatIuse">What I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
-          <div class="box">
-            <h3 class="projectName">Project name</h3>
-            <h4 class="whatIuse">What I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section id="gsap_slider2">
+    <div id="gsap_slider2">
       <div class="slider_wrapper2">
         <div class="slider_track2">
-          <div class="box2">
-            <h3>Project name</h3>
-            <h4>Wha I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
-          <div class="box2">
-            <h3>Project name</h3>
-            <h4>Wha I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
-          <div class="box2">
-            <h3>Project name</h3>
-            <h4>Wha I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
-          <div class="box2">
-            <h3>Project name</h3>
-            <h4>Wha I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
-          <div class="box2">
-            <h3>Project name</h3>
-            <h4>Wha I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
+          
         </div>
-        <div class="slider_track2" style="margin-left: 24px;">
-          <div class="box2">
-            <h3>Project name</h3>
-            <h4>Wha I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
-          <div class="box2">
-            <h3>Project name</h3>
-            <h4>Wha I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
-          <div class="box2">
-            <h3>Project name</h3>
-            <h4>Wha I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
-          <div class="box2">
-            <h3>Project name</h3>
-            <h4>Wha I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
-          <div class="box2">
-            <h3>Project name</h3>
-            <h4>Wha I use</h4>
-            <p class="describe_txt"><b>Fetching Problem</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              rem quisquam explicabo
-              ullam eligendi quibusdam similique commodi voluptates facilis officiis?</p>
-            <p class="describe_txt"><b>soliution</b>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae
-              esse quisquam
-              aperiam ullam delectus debitis cumque illum veritatis sed!</p>
-          </div>
+        <div class="slider_track2">
+          
         </div>
       </div>
-    </section>
-
+    </div>
 
   </section>
   <section id="exprement">
