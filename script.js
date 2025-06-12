@@ -5,47 +5,76 @@ gsap.registerPlugin(ScrollTrigger);
 let popup = document.createElement('div');
 const caseStudies = [
     {
-        projectName:"Project name1",
-        whatIuse:"What I use",
-        FetchingProblem:"orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis" ,
-        soliution:"orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam"
+        id:1,
+        projectName:"Simple Homepage",
+        whatIuse:"Use HTML5 CSS3",
+        FetchingProblem:"orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis" ,
+        soliution:"orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam",
+        source:"http://github.com/pronobiswas",
+        livelink:"https://react-roter-dom.vercel.app/"
 
     },
     {
-        projectName:"Project name1",
-        whatIuse:"What I use",
-        FetchingProblem:"orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis" ,
-        soliution:"orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam"
+        id:2,
+        projectName:"Multipage with Navigation",
+        whatIuse:"Use HTML5 SCSS",
+        FetchingProblem:"orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis" ,
+        soliution:"orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam",
+        source:"http://github.com/pronobiswas",
+        livelink:"https://react-roter-dom.vercel.app/"
 
     },
     {
-        projectName:"Project name1",
-        whatIuse:"What I use",
-        FetchingProblem:"orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis" ,
-        soliution:"orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam"
+        id:3,
+        projectName:"Multipage with Form",
+        whatIuse:"HTML5 CSS3 JavaScript",
+        FetchingProblem:"orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis" ,
+        soliution:"orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam",
+        source:"http://github.com/pronobiswas",
+        livelink:"https://react-roter-dom.vercel.app/"
 
     },
     {
-        projectName:"Project name1",
-        whatIuse:"What I use",
-        FetchingProblem:"orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis" ,
-        soliution:"orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam"
+        id:4,
+        projectName:"Number Gussing Game",
+        whatIuse:"HTML5 BootStrap JavaScript",
+        FetchingProblem:"orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis" ,
+        soliution:"orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam",
+        source:"http://github.com/pronobiswas",
+        livelink:"https://react-roter-dom.vercel.app/"
 
     },
     {
-        projectName:"Project name1",
-        whatIuse:"What I use",
-        FetchingProblem:"orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis" ,
-        soliution:"orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam"
+        id:5,
+        projectName:"PortFolio",
+        whatIuse:"ReactJs Tailwind CSS",
+        FetchingProblem:"orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis" ,
+        soliution:"orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam",
+        source:"http://github.com/pronobiswas",
+        livelink:"https://react-roter-dom.vercel.app/"
 
     },
     {
-        projectName:"Project name1",
-        whatIuse:"What I use",
-        FetchingProblem:"orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis" ,
-        soliution:"orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam"
+        id:6,
+        projectName:"Ecommarce Site",
+        whatIuse:"React JS Express JS",
+        FetchingProblem:"orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis" ,
+        soliution:"orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam",
+        source:"http://github.com/pronobiswas",
+        livelink:"https://react-roter-dom.vercel.app/"
 
-    }
+    },
+    {
+        id:7,
+        projectName:"Theme Customization",
+        whatIuse:"Wordpress",
+        FetchingProblem:"orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis orem ipsum dolor sit amet consectetur adipisicing elit Et rem quisquam explicabo ullam eligendi quibusdam similique commodi voluptates facilis officiis" ,
+        soliution:"orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam orem ipsum, dolor sit amet consectetur adipisicing elit. Natus quae esse quisquam",
+        source:"http://github.com/pronobiswas",
+        livelink:"https://react-roter-dom.vercel.app/"
+
+    },
+
 ]
 let slider_track = document.querySelectorAll('.slider_track');
 let slider_track2 = document.querySelectorAll('.slider_track2');
@@ -76,10 +105,30 @@ function handleCaseStydiesItem(index){
     <div class="itemCardWarpper">
       <div class="close" onclick="dismisItemWarpper()">X</div>
       <div class="itemImage"></div>
-      <div class="projectName">${itemdata.projectName}</div>
-      <div class="whatIuse">${itemdata.whatIuse}</div>
-      <div class="feacthingProblem">${itemdata.FetchingProblem}</div>
-      <div class="solution">${itemdata.soliution}</div>
+      <div class="descBox projectName">
+      <h5>Project NAme</h5>
+       <p>${itemdata.projectName}</p>
+       </div>
+      <div class="descBox whatIuse">
+      <h5>What I Use</h5>
+      <p>${itemdata.whatIuse}</p>
+      </div>
+      <div class="descBox feacthingProblem">
+      <h5>Featching Problems</h5>
+      <p>${itemdata.FetchingProblem}</p>
+      </div>
+      <div class="descBox solution">
+      <h5>Solution</h5>
+      <p>${itemdata.soliution}</p>
+      </div>
+      <div class="descBox sourceCode">
+      <h5>Source</h5>
+      <p>${itemdata.source}</p>
+      </div>
+      <div class="descBox liveLink">
+      <h5>Live Link</h5>
+      <p>${itemdata.livelink}</p>
+      </div>
     </div>
   `
   popup.innerHTML= html;
@@ -542,13 +591,13 @@ document.querySelectorAll(".bigtext").forEach((texts) => {
     onSplit(self) {
       gsap.from(self.chars, {
         duration: 1,
-        y: 140,
+        y: 240,
         autoAlpha: 0,
         stagger: 0.05,
         scrollTrigger: {
           trigger: texts,
-          start: "top 100%",
-          end: "top 70%",
+          start: "top 90%",
+          end: "top 50%",
           scrub: true,
         }
       });
