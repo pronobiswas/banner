@@ -2,7 +2,7 @@
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollTrigger);
-
+let popup = document.createElement('div');
 const caseStudies = [
     {
         projectName:"Project name1",
@@ -51,9 +51,9 @@ let slider_track = document.querySelectorAll('.slider_track');
 let slider_track2 = document.querySelectorAll('.slider_track2');
 
 let html = '';
-caseStudies.forEach((data) => {
+caseStudies.forEach((data , index) => {
   html += `
-    <div class="box">
+    <div class="box" onClick ="handleCaseStydiesItem(${index})">
       <h3 class="projectName">${data.projectName}</h3>
       <h4 class="whatIuse">${data.whatIuse}</h4>
       <p class="describe_txt"><b>Fetching Problem</b>${data.FetchingProblem}</p>
@@ -67,13 +67,40 @@ slider_track.forEach((elem)=>{
 slider_track2.forEach((elem)=>{
     elem.innerHTML = html;
 })
+function handleCaseStydiesItem(index){
+  let itemdata = caseStudies[index];
+  
+  popup.classList.add('itemWarpper')
+  let html = `
+  
+    <div class="itemCardWarpper">
+      <div class="close" onclick="dismisItemWarpper()">X</div>
+      <div class="itemImage"></div>
+      <div class="projectName">${itemdata.projectName}</div>
+      <div class="whatIuse">${itemdata.whatIuse}</div>
+      <div class="feacthingProblem">${itemdata.FetchingProblem}</div>
+      <div class="solution">${itemdata.soliution}</div>
+    </div>
+  `
+  popup.innerHTML= html;
+  document.body.appendChild(popup);
+  
+}
+function dismisItemWarpper(){
+  console.log("ki re vab ki?");
+  
+  popup.innerHTML= "";
+  document.body.removeChild(popup);
+}
 
+// ==exprement==
 let exprement_box = document.querySelectorAll('.exprement_box');
 exprement_box.forEach((elem , idx) => {
   elem.style.top = 0,
   elem.style.left = `${idx * 20}%`;
   elem.style.zIndex = `${idx}`;
 });
+
 
 
 
@@ -126,22 +153,25 @@ document.addEventListener("DOMContentLoaded", function () {
   cursor.classList.add("custom-cursor");
   document.body.appendChild(cursor);
 
+  // Create 200 lines inside the cursor
+  for(let i = 0; i < 200; i++) {
+    const cursorLine = document.createElement("div");
+    cursorLine.classList.add("cursor-line");
+    cursor.appendChild(cursorLine);
+  }
+
   document.addEventListener("mousemove", (e) => {
-    gsap.to(cursor, {
+    gsap.to(".cursor-line", {
       x: e.clientX,
       y: e.clientY,
-      ease: "back.out(1.7)",
-      duration: 0.5,
+      scale: (i, target)=>{
+        return 1+(i*(2/200))
+      },
+      duration:0.2,
+      stagger:-0.0015,
     });
   });
 
-  // Optional: cursor scale on click
-  document.addEventListener("mousedown", () => {
-    cursor.style.transform = "translate(-50%, -50%) scale(0.5)";
-  });
-  document.addEventListener("mouseup", () => {
-    cursor.style.transform = "translate(-50%, -50%) scale(1)";
-  });
 
   // ===draw text===
   gsap.to("#myName", {
