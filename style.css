@@ -108,7 +108,7 @@ header nav .nav_links .nav_item a:hover::after {
 #banner {
   width: 100%;
   height: 100vh;
-  background-image: radial-gradient(circle, #ffffff, #000000);
+  background: radial-gradient(circle, #cfcfcf, #000000);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -167,15 +167,15 @@ header nav .nav_links .nav_item a:hover::after {
   left: -1%;
 }
 #banner .icon5 {
-  top: 55%;
+  top: -3%;
   right: 25%;
 }
 #banner .icon6 {
-  top: 2%;
+  top: 1%;
   left: 45%;
 }
 #banner .icon7 {
-  bottom: 15%;
+  bottom: 5%;
   left: 45%;
 }
 #banner .icon8 {
@@ -459,7 +459,7 @@ header nav .nav_links .nav_item a:hover::after {
   z-index: 9;
 }
 #banner .layer1 .bannerLogo {
-  width: 60%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -473,11 +473,9 @@ header nav .nav_links .nav_item a:hover::after {
   z-index: 9;
 }
 #banner .layer1 .bannerLogo .bannerText .nameContainer {
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: rgba(255, 255, 255, 0);
   background-color: rgba(255, 255, 255, 0);
   position: relative;
   overflow: hidden;
@@ -489,7 +487,7 @@ header nav .nav_links .nav_item a:hover::after {
   right: 0;
   width: 0;
   height: 100%;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.3960784314);
   z-index: 1;
   animation-name: nameContainerEffect;
   animation-duration: 1s;
@@ -502,14 +500,14 @@ header nav .nav_links .nav_item a:hover::after {
   right: 0;
   width: 0;
   height: 100%;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.3568627451);
   z-index: 2;
   animation-name: nameContainerEffect;
   animation-duration: 1s;
   animation-delay: 1.5s;
 }
 #banner .layer1 .bannerLogo .bannerText .nameContainer #myNames {
-  font-size: 6vw;
+  font-size: 5vw;
   color: #000000;
   background-color: rgba(0, 0, 0, 0);
 }
@@ -531,29 +529,22 @@ header nav .nav_links .nav_item a:hover::after {
   font-size: 30px;
 }
 #banner .layer1 .bannerLogo .bannerText .shortDescription {
-  font-size: 18px;
-  background-image: linear-gradient(90deg, #000000, rgba(0, 0, 0, 0));
-  background-size: 400%;
+  width: 100%;
+  max-width: 760px;
+  font-size: clamp(16px, 4vw, 22px);
+  background-image: linear-gradient(90deg, #2e0000, rgba(0, 19, 59, 0.9529411765), rgba(0, 44, 46, 0.9529411765), rgba(0, 19, 59, 0.9529411765), rgba(53, 65, 0, 0.9529411765));
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: left;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation-name: shortDescriptionEffect;
-  animation-duration: 1s;
-  animation-delay: 3.5s;
-}
-@keyframes shortDescriptionEffect {
-  from {
-    background-size: 5%;
-  }
-  to {
-    background-size: 200%;
-  }
 }
 #banner .layer1 .bannerLogo .bannerText .aboutme {
-  border: none;
-  outline: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid transparent;
+  outline: 1px solid transparent;
   padding: 10px 30px 10px 10px;
   position: relative;
   margin-top: 50px;
@@ -565,7 +556,10 @@ header nav .nav_links .nav_item a:hover::after {
 }
 #banner .layer1 .bannerLogo .bannerText .aboutme:hover {
   cursor: pointer;
-  background-color: #000000;
+  border: 2px solid #c200fd;
+  outline: 1px solid #620080;
+  background-color: rgba(0, 0, 0, 0.2588235294);
+  color: #ffffff;
 }
 #banner .layer1 .bannerLogo .bannerText .aboutme:hover .buttonArrow {
   top: 14px;
@@ -576,6 +570,20 @@ header nav .nav_links .nav_item a:hover::after {
   top: 14px;
   right: -15px;
   transition: 0.2s all linear;
+}
+#banner .layer1 .bannerLogo .bannerText .aboutme .svg-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+#banner .layer1 .bannerLogo .bannerText .aboutme .svg-container svg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  opacity: 0;
 }
 #banner .layer1 .bannerLogo .bannerLogo_container {
   width: -moz-fit-content;
@@ -625,7 +633,8 @@ header nav .nav_links .nav_item a:hover::after {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #000000;
+  background-image: linear-gradient(#000000, #000000);
+  background-size: 100% 100%;
   position: relative;
 }
 #caseStudies h2 {
@@ -685,7 +694,7 @@ header nav .nav_links .nav_item a:hover::after {
 }
 #caseStudies #gsap_slider2 {
   width: 100%;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.137254902);
   overflow: hidden;
   padding: 20px;
 }
@@ -760,7 +769,8 @@ header nav .nav_links .nav_item a:hover::after {
   height: -moz-fit-content;
   height: fit-content;
   padding-bottom: 100px;
-  background-color: #000000;
+  background-image: linear-gradient(#1d1d1d, #000000);
+  background-size: 100% 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -806,7 +816,8 @@ header nav .nav_links .nav_item a:hover::after {
   height: -moz-fit-content;
   height: fit-content;
   padding: 20px 20px 100px 20px;
-  background-color: #000000;
+  background-image: linear-gradient(#000000, #000000);
+  background-size: 100% 100%;
   position: relative;
 }
 #bigTextSection #flowerSvg {

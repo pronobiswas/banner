@@ -104,7 +104,8 @@ header {
 #banner {
   width: 100%;
   height: 100vh;
-  background-image: radial-gradient(circle, #ffffff, #000000);
+  // background: radial-gradient(circle, #424242da, #000000bd),url('./banner1.jpg') ;
+  background: radial-gradient(circle, #cfcfcf, #000000) ;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -161,15 +162,16 @@ header {
     left: -1%;
   }
   .icon5 {
-    top: 55%;
+    top: -3%;
     right: 25%;
+
   }
   .icon6 {
-    top: 2%;
+    top: 1%;
     left: 45%;
   }
   .icon7 {
-    bottom: 15%;
+    bottom: 5%;
     left: 45%;
   }
   .icon8 {
@@ -281,6 +283,7 @@ header {
               border: 1px solid red;
               padding: 4px 10px;
               background-color: #000000;
+              
             }
           }
         }
@@ -478,7 +481,7 @@ header {
     justify-content: center;
     z-index: 9;
     .bannerLogo {
-      width: 60%;
+      width: 100%;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -489,9 +492,8 @@ header {
         height: fit-content;
         z-index: 9;
         .nameContainer {
-          width: fit-content;
+          width: 100%;
           height: fit-content;
-          background-color: #ffffff00;
           background-color: #ffffff00;
           position: relative;
           overflow: hidden;
@@ -502,7 +504,7 @@ header {
             right: 0;
             width: 0;
             height: 100%;
-            background-color: #ffffff;
+            background-color: #ffffff65;
             z-index: 1;
             animation-name: nameContainerEffect;
             animation-duration: 1s;
@@ -515,7 +517,7 @@ header {
             right: 0;
             width: 0;
             height: 100%;
-            background-color: #ffffff;
+            background-color: #ffffff5b;
             z-index: 2;
             animation-name: nameContainerEffect;
             animation-duration: 1s;
@@ -523,7 +525,7 @@ header {
           }
 
           #myNames {
-            font-size: 6vw;
+            font-size: 5vw;
             color: #000000;
             background-color: #00000000;
           }
@@ -546,42 +548,39 @@ header {
           font-size: 30px;
         }
         .shortDescription {
-          font-size: 18px;
-          background-image: linear-gradient(90deg, #000000, #00000000);
-          background-size: 400%;
+          width: 100%;
+          max-width: 760px;
+          font-size: clamp(16px, 4vw, 22px);
+          background-image: linear-gradient(90deg, #2e0000, #00133bf3, #002c2ef3, #00133bf3, #354100f3);
+          background-size: 100%;
           background-repeat: no-repeat;
           background-position: left;
           -webkit-background-clip: text;
           background-clip: text;
           -webkit-text-fill-color: transparent;
-          animation-name: shortDescriptionEffect;
-          animation-duration: 1s;
-          animation-delay: 3.5s;
-          @keyframes shortDescriptionEffect {
-            from {
-              background-size: 5%;
-            }
-            to {
-              background-size: 200%;
-            }
-          }
+          // -webkit-text-stroke: 0.5px rgb(238, 0, 0);
+          // text-stroke: 0.5px rgb(238, 0, 0); 
+          
         }
 
         .aboutme {
-          border: none;
-          outline: none;
-          padding: 10px 30px 10px 10px;
+          width: fit-content;
+          border: 2px solid transparent;
+          outline: 1px solid transparent;
+          padding: 10px 30px 10px 10px; 
           position: relative;
           margin-top: 50px;
           font-size: 18px;
           background-color: #c200fd;
           color: white;
           border-radius: 5px;
-
           transition: 0.3s all linear;
           &:hover {
             cursor: pointer;
-            background-color: #000000;
+            border: 2px solid #c200fd;
+            outline: 1px solid #620080;
+            background-color: #00000042;
+            color: #ffffff;
           }
           &:hover .buttonArrow {
             top: 14px;
@@ -592,6 +591,20 @@ header {
             top: 14px;
             right: -15px;
             transition: 0.2s all linear;
+          }
+          .svg-container{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            svg{
+              position: absolute;
+              top: 0;
+              left: 50%;
+              opacity: 0;
+            }
           }
         }
       }
@@ -641,7 +654,9 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #000000;
+  // background: radial-gradient(circle, #5252528a, #0000008c),url('./casestudies.jpg') ;
+  background-image: linear-gradient( #000000, #000000);
+  background-size: 100% 100%;
   position: relative;
 
   h2 {
@@ -701,7 +716,7 @@ header {
   }
   #gsap_slider2 {
     width: 100%;
-    background-color: #000000;
+    background-color: #00000023;
     overflow: hidden;
     padding: 20px;
     .slider_wrapper2 {
@@ -775,7 +790,9 @@ header {
   width: 100%;
   height: fit-content;
   padding-bottom: 100px;
-  background-color: #000000;
+  // background: radial-gradient(circle, #5252528a, #0000008c),url('./exprement.jpg') ;
+  background-image: linear-gradient( #1d1d1d, #000000);
+  background-size: 100% 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -818,7 +835,10 @@ header {
   width: 100%;
   height: fit-content;
   padding: 20px 20px 100px 20px;
-  background-color: #000000;
+  // background: radial-gradient(circle, #5252528a, #0000008c),url('./footer.jpeg') ;
+  // background-image: linear-gradient(circle, #5252528a, #0000008c);
+  background-image: linear-gradient( #000000, #000000);
+  background-size: 100% 100%;
   position: relative;
   #flowerSvg {
     position: absolute;
