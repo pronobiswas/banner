@@ -348,6 +348,7 @@ header nav .nav_links .nav_item a:hover::after {
 }
 #banner #aboutMe .aboutmeWrapper .aboutContact .aboutContactWrapper .pro_form {
   width: 100%;
+  z-index: 9999;
 }
 #banner #aboutMe .aboutmeWrapper .aboutContact .aboutContactWrapper .pro_form .formRow {
   position: relative;

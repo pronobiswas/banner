@@ -175,11 +175,11 @@
             <circle cx="10" cy="10" r="10" fill="#000" />
           </svg>
         </div>
-    
+
         <!-- ====sprate icon===== -->
         <div id="aboutMe">
           <div class="aboutmeWrapper">
-    
+
             <div class="aboutContent">
               <div class="talkAboutme">
                 <svg id="aboutSvg" xmlns="http://www.w3.org/2000/svg" version="1.0" width="100%" height="48px"
@@ -260,9 +260,9 @@
                       <li>MySql</li>
                     </ul>
                   </div>
-    
+
                 </div>
-    
+
                 <svg id="aboutSvg" xmlns="http://www.w3.org/2000/svg" version="1.0" width="100%" height="48px"
                   viewBox="0 0 300.000000 48.000000" preserveAspectRatio="xMidYMid meet">
                   <g transform="translate(0.000000,48.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
@@ -299,9 +299,9 @@
                   </g>
                 </svg>
               </div>
-    
+
             </div>
-    
+
             <div class="aboutContact">
               <button title="AboutMe" type="button" id="closeAboutme" onclick="hideAboutMe()">
                 <svg class="btnArrow" width="31" height="29" viewBox="0 0 31 29" fill="red"
@@ -311,9 +311,10 @@
                     stroke="#D82D2D" stroke-linejoin="bevel" />
                 </svg>
               </button>
-    
+
               <div class="aboutContactWrapper">
-                <svg id="tab" width="533" height="764" viewBox="0 0 533 764" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg id="tab" width="533" height="764" viewBox="0 0 533 764" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M34.3965 2H92.0674C92.7202 2.00009 93.3524 2.21313 93.8701 2.60254L94.085 2.78027L102.275 10.2256C103.521 11.3579 105.133 12.0034 106.815 12.0439L312.366 16.9961L360.293 21.9893L360.396 22H528C529.657 22 531 23.3431 531 25V759C531 760.657 529.657 762 528 762H5C3.34315 762 2 760.657 2 759V22.8164C2 21.8328 2.48169 20.9161 3.28125 20.3574L3.44531 20.251L32.8418 2.43457C33.3106 2.15048 33.8484 2.00007 34.3965 2Z"
                     stroke="black" stroke-width="4" />
@@ -332,7 +333,7 @@
                 </svg>
                 <div class="whoami">
                   <div class="myPic"></div>
-    
+
                   <div class="description">
                     <h4>Address and Contact</h4>
                     <p>+880 1531-881596</p>
@@ -340,19 +341,19 @@
                     <p>
                       Mayarkhali, Kalkalia-9370, Fakirhat, Bagerhat,
                     </p>
-    
+
                   </div>
                 </div>
-                <form class="pro_form">
+                <form class="pro_form" id="contactForm">
                   <div class="formRow">
-                    <label class="pro_label pro_label_input" for="mail">Your Mail</label>
+                    <label class="pro_label pro_label_input" for="from_email">Your Mail</label>
                     <input class="pro_input pro_input_input" type="mail" name="mail" id="mail" required>
                   </div>
                   <div class="formRow">
                     <label class="pro_label pro_label_textarea" for="openion">Enter your Openion</label>
-                    <textarea class="pro_input" name="openion" id="openion" rows="6"></textarea>
+                    <textarea class="pro_input" name="message" id="openion" rows="6"></textarea>
                   </div>
-                  <button type="button" class="getAquote">Get a Quote</button>
+                  <button type="submit" class="getAquote" id="getAquoteBtn">Get a Quote</button>
                 </form>
               </div>
             </div>
@@ -406,7 +407,7 @@
                   </svg>
                 </div>
               </div>
-    
+
               <div class="rotateText">
                 <div class="xxx php">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
@@ -426,7 +427,7 @@
             </div>
           </div>
         </div>
-    
+
         <div class="layer1">
           <div class="bannerLogo">
             <div class="bannerText">
@@ -435,11 +436,14 @@
               </div>
               <h3 id="myTitle">An Interactive Web Developer</h3>
               <p class="shortDescription">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio natus commodi accusantium, nihil eum delectus. Maxime, dolorem voluptates quae, numquam soluta consequatur recusandae dolores omnis cupiditate voluptate voluptatibus, cum at minus nemo provident nisi ab repellendus pariatur sequi enim! Veniam?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio natus commodi accusantium, nihil eum
+                delectus. Maxime, dolorem voluptates quae, numquam soluta consequatur recusandae dolores omnis
+                cupiditate voluptate voluptatibus, cum at minus nemo provident nisi ab repellendus pariatur sequi enim!
+                Veniam?
               </p>
               <div class="aboutme" onclick="showAboutMe()">
                 About Me
-    
+
                 <svg class="buttonArrow" width="41" height="16" viewBox="0 0 41 16" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -466,7 +470,7 @@
             </div>
           </div>
         </div>
-    
+
         <div class="right_col">
           <div class="awardImg">
             <img src="./award.png" alt="png" />
@@ -506,9 +510,9 @@
           </div>
         </div>
       </section>
-    
+
       <section id="caseStudies">
-    
+
         <h2>Case studies</h2>
         <svg id="headersvg" xmlns="http://www.w3.org/2000/svg" version="1.0" width="100%" height="48px"
           viewBox="0 0 300.000000 48.000000" preserveAspectRatio="xMidYMid meet">
@@ -545,7 +549,7 @@
               class="iconLeafDown" fill="green" />
           </g>
         </svg>
-    
+
         <div id="gsap_slider">
           <div class="slider_wrapper">
             <div class="slider_track">
@@ -554,18 +558,18 @@
             </div>
           </div>
         </div>
-    
+
         <div id="gsap_slider2">
           <div class="slider_wrapper2">
             <div class="slider_track2">
-              
+
             </div>
             <div class="slider_track2">
-              
+
             </div>
           </div>
         </div>
-    
+
       </section>
       <section id="exprement">
         <h2>Experiment</h2>
@@ -608,7 +612,8 @@
           <div class="exprement_box">
             <h3>exprement 1</h3>
             <small>exprement</small>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto tempore?
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto
+              tempore?
               Blanditiis!</p>
             <p>live link : http://practice.example</p>
             <p>github link: http://github.com/pronobiswas</p>
@@ -616,7 +621,8 @@
           <div class="exprement_box">
             <h3>exprement 2</h3>
             <small>exprement</small>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto tempore?
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto
+              tempore?
               Blanditiis!</p>
             <p>live link : http://practice.example</p>
             <p>github link: http://github.com/pronobiswas</p>
@@ -624,7 +630,8 @@
           <div class="exprement_box">
             <h3>exprement 3</h3>
             <small>exprement</small>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto tempore?
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto
+              tempore?
               Blanditiis!</p>
             <p>live link : http://practice.example</p>
             <p>github link: http://github.com/pronobiswas</p>
@@ -632,7 +639,8 @@
           <div class="exprement_box">
             <h3>exprement 4</h3>
             <small>exprement</small>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto tempore?
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto
+              tempore?
               Blanditiis!</p>
             <p>live link : http://practice.example</p>
             <p>github link: http://github.com/pronobiswas</p>
@@ -640,7 +648,8 @@
           <div class="exprement_box">
             <h3>exprement 5</h3>
             <small>exprement</small>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto tempore?
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto
+              tempore?
               Blanditiis!</p>
             <p>live link : http://practice.example</p>
             <p>github link: http://github.com/pronobiswas</p>
@@ -648,7 +657,8 @@
           <div class="exprement_box">
             <h3>exprement 6</h3>
             <small>exprement</small>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto tempore?
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto
+              tempore?
               Blanditiis!</p>
             <p>live link : http://practice.example</p>
             <p>github link: http://github.com/pronobiswas</p>
@@ -656,7 +666,8 @@
           <div class="exprement_box">
             <h3>exprement 7</h3>
             <small>exprement</small>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto tempore?
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto
+              tempore?
               Blanditiis!</p>
             <p>live link : http://practice.example</p>
             <p>github link: http://github.com/pronobiswas</p>
@@ -664,7 +675,8 @@
           <div class="exprement_box">
             <h3>exprement 8</h3>
             <small>exprement</small>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto tempore?
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto
+              tempore?
               Blanditiis!</p>
             <p>live link : http://practice.example</p>
             <p>github link: http://github.com/pronobiswas</p>
@@ -672,7 +684,8 @@
           <div class="exprement_box">
             <h3>exprement 9</h3>
             <small>exprement</small>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto tempore?
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto
+              tempore?
               Blanditiis!</p>
             <p>live link : http://practice.example</p>
             <p>github link: http://github.com/pronobiswas</p>
@@ -680,7 +693,8 @@
           <div class="exprement_box">
             <h3>exprement 10</h3>
             <small>exprement</small>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto tempore?
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto
+              tempore?
               Blanditiis!</p>
             <p>live link : http://practice.example</p>
             <p>github link: http://github.com/pronobiswas</p>
@@ -688,7 +702,8 @@
           <div class="exprement_box">
             <h3>exprement 11</h3>
             <small>exprement</small>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto tempore?
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto
+              tempore?
               Blanditiis!</p>
             <p>live link : http://practice.example</p>
             <p>github link: http://github.com/pronobiswas</p>
@@ -696,7 +711,8 @@
           <div class="exprement_box">
             <h3>exprement 12</h3>
             <small>exprement</small>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto tempore?
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto
+              tempore?
               Blanditiis!</p>
             <p>live link : http://practice.example</p>
             <p>github link: http://github.com/pronobiswas</p>
@@ -704,7 +720,8 @@
           <div class="exprement_box">
             <h3>exprement 13</h3>
             <small>exprement</small>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto tempore?
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto
+              tempore?
               Blanditiis!</p>
             <p>live link : http://practice.example</p>
             <p>github link: http://github.com/pronobiswas</p>
@@ -712,7 +729,8 @@
           <div class="exprement_box">
             <h3>exprement 14</h3>
             <small>exprement</small>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto tempore?
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid deleniti repellendus minus iusto
+              tempore?
               Blanditiis!</p>
             <p>live link : http://practice.example</p>
             <p>github link: http://github.com/pronobiswas</p>
@@ -720,13 +738,15 @@
         </div>
       </section>
       <section id="bigTextSection">
-    
-        <svg id="flowerSvg" width="330" height="329" viewBox="0 0 330 329" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        <svg id="flowerSvg" width="330" height="329" viewBox="0 0 330 329" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
           <path id="myPath"
             d="M168.733 165.159C168.733 165.159 129.521 60.4773 172.149 25.1929C210.393 -6.46262 264.22 -6.37057 300.269 29.5241C352.574 81.6049 168.733 165.159 168.733 165.159ZM168.733 165.159C168.733 165.159 207.061 263.033 168.733 299.882C131.125 336.039 71.4202 336.039 33.8115 299.882C-19.8859 248.256 168.733 165.159 168.733 165.159ZM168.733 165.159C168.733 165.159 264.03 132.658 300.269 168.35C337.244 204.766 337.244 263.466 300.269 299.882C247.86 351.499 168.733 165.159 168.733 165.159ZM168.733 165.159C168.733 165.159 72.9907 202.893 33.8115 168.35C-8.60386 130.955 -8.60383 62.5884 33.8115 25.1929C90.8541 -25.0987 168.733 165.159 168.733 165.159Z"
             stroke="url(#paint0_linear_97_24)" stroke-width="3" />
           <defs>
-            <linearGradient id="paint0_linear_97_24" x1="36" y1="340.5" x2="334.5" y2="12" gradientUnits="userSpaceOnUse">
+            <linearGradient id="paint0_linear_97_24" x1="36" y1="340.5" x2="334.5" y2="12"
+              gradientUnits="userSpaceOnUse">
               <stop offset="0.0180505" stop-color="#FFF701" />
               <stop offset="0.191153" stop-color="#FB00FF" />
               <stop offset="0.70735" stop-color="#0075B0" />
@@ -737,12 +757,12 @@
           </defs>
         </svg>
         <div id="circle"></div>
-    
-    
+
+
         <div class="bigtextWrapper">
           <h1 class="bigtext">POWERED</h1>
           <h1 class="bigtext">By</h1>
-    
+
         </div>
         <div class="video_mask_container">
           <video src="maskVideo2.mp4" autoplay muted loop playsinline class="masked-video"></video>
@@ -756,7 +776,7 @@
             </defs>
           </svg>
         </div>
-    
+
       </section>
       <!-- ====content ==== -->
     </div>
@@ -770,6 +790,29 @@
   <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Observer.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathPlugin.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+  <script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "hGXnZ_IzZesvJopYp",
+      });
+   })();
+   document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_mgaa7q8", "template_j467516", this).then(
+      function () {
+        alert("Message sent successfully!");
+      },
+      function (error) {
+        alert("Failed to send message. Error: " + error.text);
+      }
+    );
+  })
+</script>
+
   <script src="script.js"></script>
 </body>
 

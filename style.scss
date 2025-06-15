@@ -341,29 +341,7 @@ header {
           }
           .pro_form {
             width: 100%;
-            // .formRow{
-            //   width: 100%;
-            //   margin-bottom: 10px;
-            //   height: fit-content;
-            //   border: 1px solid black;
-            //   position: relative;
-            //   padding: 5px;
-
-            //   .pro_input{
-            //     width: 100%;
-            //     height: fit-content;
-            //     padding: 8px;
-            //     border: none;
-            //     outline: none;
-            //     background-color: transparent;
-            //   }
-            //   .pro_label{
-            //     width: fit-content;
-            //     position: absolute;
-            //     top: 10px;
-            //     left: 10px;
-            //   }
-            // }
+            z-index: 9999;
             .formRow {
               position: relative;
               margin-bottom: 20px;
